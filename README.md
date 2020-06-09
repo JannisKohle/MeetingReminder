@@ -10,5 +10,7 @@ To create a meeting, run ```create.py``` and answer the questions.
 The date / time needs to look like this: ```hour:minute year.month.day```
 
 If you want to see a list of the meeting, execute ```list.py```.
-To make the program remind you of a meeting at the right time, run ```python3 remind.py '{meeting-name}'```.
+To make the program remind you of a meeting at the right time, run ```python3 remind.py``` and answer the questions.
 **IMPORTANT:** You need to leave the script running in the background!
+
+To delete a meeting, you can do ```python3 delete.py```

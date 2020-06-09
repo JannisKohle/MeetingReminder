@@ -3,6 +3,16 @@ import json
 import datetime
 from time import sleep
 
+def delete(name):
+    with open("meetings.json", "r+") as f:
+        content = json.load(f)
+
+    del content[name]
+
+    with open("meetings.json", "r+") as f:
+        f.truncate(0)
+        json.dump(content, f)
+
 def alarm():
     os.system("say meeting meeting meeting meeting meeting meeting meeting meeting meeting meeting")
 
@@ -22,8 +32,7 @@ def getTime():
     return str(datetime.datetime.now()).split(" ")[1][:5] # "21:30"
 
 # Find out if same day:
-test = meeting_date.copy()
-if test.replace(".", "-") != getDate():
+if meeting_date.replace(".", "-") != getDate():
     print("Today is not the day of the meeting.")
 
 else:
@@ -34,3 +43,4 @@ else:
             break
 
     alarm()
+    delete(meeting_name)

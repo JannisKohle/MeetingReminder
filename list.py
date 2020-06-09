@@ -7,4 +7,4 @@ with open("meetings.json", "r+") as f:
 
     else:
         for k, v in zip(list(content.keys()), list(content.values())):
-            print(f"- meeting {k} at time {v}")
+            print(f"- meeting {k} at {v}")
