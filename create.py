@@ -8,8 +8,8 @@ with open("meetings.json", "r+") as f:
 
     if name in content:
         print("This meeting already exists. Please choose another name.")
-        return
 
-    content[name] = time
+    else:
 
-    json.dump(content, f)
+        content[name] = time
+        json.dump(content, f)
